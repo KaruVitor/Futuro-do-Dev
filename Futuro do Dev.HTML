@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Futuro da Programação na Era da IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-slate-800">Futuro do Dev</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#cenario" class="text-slate-600 hover:text-indigo-600 transition">Cenário Atual</a>
+                <a href="#revolucao" class="text-slate-600 hover:text-indigo-600 transition">A Revolução IA</a>
+                <a href="#habilidades" class="text-slate-600 hover:text-indigo-600 transition">Habilidades</a>
+                <a href="#recomendacoes" class="text-slate-600 hover:text-indigo-600 transition">Recomendações</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#cenario" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-50">Cenário Atual</a>
+            <a href="#revolucao" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-50">A Revolução IA</a>
+            <a href="#habilidades" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-50">Habilidades</a>
+            <a href="#recomendacoes" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-50">Recomendações</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 md:py-16">
+
+        <section id="hero" class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-800 mb-4">Ainda vale a pena ser programador?</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-600">
+                <span class="font-bold text-indigo-600">Sim, mais do que nunca.</span> Mas o jogo mudou. A IA não está substituindo programadores, está os <span class="font-semibold">promovendo</span>. Explore os dados e descubra como se adaptar e prosperar na nova era do desenvolvimento de software.
+            </p>
+        </section>
+
+        <section id="cenario" class="mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-slate-800 mb-2">O Mercado Continua Aquecido</h3>
+                <p class="max-w-2xl mx-auto text-slate-600">Longe de encolher, o mercado de software global apresenta um crescimento robusto. A transformação digital e a própria IA impulsionam a demanda por soluções tecnológicas complexas, que exigem a expertise de desenvolvedores qualificados.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="kpi-card text-center">
+                    <p class="text-4xl font-extrabold text-indigo-600 mb-2">$740 Bi</p>
+                    <h4 class="font-semibold text-slate-800">Mercado Global de Software</h4>
+                    <p class="text-sm text-slate-500">Projeção de receita até 2025, um sinal claro da contínua expansão do setor.</p>
+                </div>
+                <div class="kpi-card text-center">
+                    <p class="text-4xl font-extrabold text-indigo-600 mb-2">+14%</p>
+                    <h4 class="font-semibold text-slate-800">Aumento em Gastos com Software</h4>
+                    <p class="text-sm text-slate-500">Crescimento previsto para 2025, superando a já alta taxa de 11.7% de 2024.</p>
+                </div>
+                <div class="kpi-card text-center lg:col-span-1">
+                     <p class="text-4xl font-extrabold text-indigo-600 mb-2">92%</p>
+                    <h4 class="font-semibold text-slate-800">Empresas SaaS</h4>
+                    <p class="text-sm text-slate-500">Reduziram a rotatividade de clientes ao investir em integrações, impulsionando a demanda por devs.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-md">
+                <h4 class="text-xl font-bold text-center mb-4 text-slate-800">Popularidade das Linguagens de Programação (2025)</h4>
+                <p class="text-center text-sm text-slate-500 mb-6 max-w-2xl mx-auto">Python e JavaScript continuam a dominar, com uma crescente demanda por profissionais que dominam ambas as tecnologias para integrar sistemas de IA com interfaces de usuário ricas.</p>
+                <div class="chart-container">
+                    <canvas id="languagesChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="revolucao" class="mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-slate-800 mb-2">A Revolução da IA: Ferramenta, não Ameaça</h3>
+                <p class="max-w-3xl mx-auto text-slate-600">A IA está automatizando a escrita de código em uma escala sem precedentes. Isso não elimina o programador, mas muda seu foco. A produtividade aumenta, mas a complexidade e a necessidade de supervisão humana também.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                    <h4 class="text-xl font-bold text-green-700 mb-4">🚀 O Lado da Produtividade</h4>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start"><span class="text-green-500 font-bold text-2xl mr-3">92%</span><span>dos desenvolvedores nos EUA já utilizam ferramentas de codificação com IA.</span></li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold text-2xl mr-3">41%</span><span>de todo o código novo já é gerado por assistentes de IA como o Copilot.</span></li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold text-2xl mr-3">26%</span><span>de aumento de produtividade reportado por desenvolvedores que usam assistentes de IA.</span></li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md border border-amber-200">
+                    <h4 class="text-xl font-bold text-amber-700 mb-4">🤔 O Lado da Qualidade</h4>
+                     <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start"><span class="text-amber-500 font-bold text-2xl mr-3">67%</span><span>dos desenvolvedores gastam *mais* tempo depurando código gerado por IA.</span></li>
+                        <li class="flex items-start"><span class="text-amber-500 font-bold text-2xl mr-3">68%</span><span>dedicam *mais* tempo corrigindo vulnerabilidades de segurança introduzidas pela IA.</span></li>
+                        <li class="flex items-start"><span class="text-amber-500 font-bold text-2xl mr-3">59%</span><span>dos líderes de engenharia afirmam que a IA cria erros de implantação pelo menos metade do tempo.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8 text-sm text-slate-500 italic">
+                <p>A IA acelera a geração, mas o programador se torna o guardião essencial da qualidade, segurança e lógica do sistema.</p>
+            </div>
+        </section>
+
+        <section id="habilidades" class="mb-24 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-slate-800 mb-2">O Novo Programador: De Codificador a Arquiteto</h3>
+                <p class="max-w-3xl mx-auto text-slate-600">O foco está mudando da escrita de linhas de código para o design de sistemas, pensamento crítico e orquestração de tecnologias complexas. Apresentamos as habilidades essenciais para prosperar neste novo cenário.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-6">
+                <div>
+                    <h4 class="text-2xl font-bold text-slate-800 mb-4 text-center md:text-left">Competências Técnicas</h4>
+                    <div class="space-y-3" id="tech-skills-accordion">
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold text-slate-800 mb-4 text-center md:text-left">Habilidades Humanas</h4>
+                    <div class="space-y-3" id="human-skills-accordion">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recomendacoes" class="bg-indigo-600 text-white rounded-xl p-8 md:p-12 scroll-mt-20">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-bold mb-2">Seu Roteiro Para o Futuro</h3>
+                <p class="max-w-3xl mx-auto opacity-90">A carreira de programador não apenas sobrevive, mas se torna mais estratégica e criativa. Aqui estão as recomendações para garantir seu sucesso na era da IA.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-indigo-100">
+                <div class="bg-indigo-700/50 p-6 rounded-lg">
+                    <h4 class="font-bold mb-2 text-white">1. Abrace a IA como Ferramenta</h4>
+                    <p class="text-sm">Use assistentes de IA para automatizar tarefas repetitivas. Veja a IA como um parceiro que libera seu tempo para resolver problemas mais complexos.</p>
+                </div>
+                <div class="bg-indigo-700/50 p-6 rounded-lg">
+                    <h4 class="font-bold mb-2 text-white">2. Priorize Habilidades Humanas</h4>
+                    <p class="text-sm">Invista em pensamento crítico, criatividade e comunicação. A capacidade de entender o contexto do negócio e do usuário é algo que a IA não pode replicar.</p>
+                </div>
+                <div class="bg-indigo-700/50 p-6 rounded-lg">
+                    <h4 class="font-bold mb-2 text-white">3. Foque em Arquitetura de Sistemas</h4>
+                    <p class="text-sm">Mude o foco de "como codificar" para "o que construir e como integrar". O valor está em projetar sistemas coesos e escaláveis.</p>
+                </div>
+                <div class="bg-indigo-700/50 p-6 rounded-lg">
+                    <h4 class="font-bold mb-2 text-white">4. Seja o Guardião da Qualidade</h4>
+                    <p class="text-sm">Com mais código sendo gerado automaticamente, a depuração, os testes e a garantia de segurança se tornam responsabilidades humanas ainda mais críticas.</p>
+                </div>
+                <div class="bg-indigo-700/50 p-6 rounded-lg">
+                    <h4 class="font-bold mb-2 text-white">5. Comprometa-se a Aprender</h4>
+                    <p class="text-sm">O cenário tecnológico mudará ainda mais rápido. A adaptabilidade e a aprendizagem contínua são as habilidades mais seguras para o futuro.</p>
+                </div>
+                <div class="bg-indigo-700/50 p-6 rounded-lg">
+                    <h4 class="font-bold mb-2 text-white">6. Integre Ética no seu Trabalho</h4>
+                    <p class="text-sm">Entenda os vieses e as implicações éticas dos sistemas de IA. O desenvolvimento responsável é uma competência cada vez mais valorizada.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 border-t border-slate-200">
+        <p class="text-sm text-slate-500">Uma visualização interativa baseada no relatório "O Futuro da Programação na Era da IA".</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const languagesData = {
+                labels: ['Python', 'C++', 'Java', 'JavaScript', 'Outras'],
+                datasets: [{
+                    label: 'Popularidade',
+                    data: [23.85, 11.08, 10.36, 6.23, 48.48],
+                    backgroundColor: [
+                        '#4f46e5',
+                        '#6366f1',
+                        '#818cf8',
+                        '#a5b4fc',
+                        '#c7d2fe',
+                    ],
+                    borderColor: '#f8fafc',
+                    hoverOffset: 4
+                }]
+            };
+
+            const languagesConfig = {
+                type: 'doughnut',
+                data: languagesData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                   family: 'Inter'
+                                }
+                            }
+                        },
+                        tooltip: {
+                           callbacks: {
+                               label: function(context) {
+                                   let label = context.label || '';
+                                   if (label) {
+                                       label += ': ';
+                                   }
+                                   if (context.parsed !== null) {
+                                       label += context.parsed + '%';
+                                   }
+                                   return label;
+                               }
+                           }
+                        }
+                    }
+                }
+            };
+
+            const languagesChartCtx = document.getElementById('languagesChart').getContext('2d');
+            new Chart(languagesChartCtx, languagesConfig);
+
+            const techSkills = [
+                { title: 'Engenharia de Prompt', content: 'Habilidade de criar instruções claras e eficazes para guiar modelos de IA. Essencial para extrair os melhores resultados de ferramentas como GPT-4.' },
+                { title: 'Fundamentos de IA/ML', content: 'Compreensão de como os modelos de Machine Learning funcionam, incluindo pipelines de dados e limitações. Crucial para integrar IA de forma eficaz e responsável.' },
+                { title: 'Qualidade e Segurança', content: 'Capacidade avançada de depurar, testar e proteger código. Com a IA introduzindo novos erros e vulnerabilidades, esta habilidade torna-se primordial.' },
+                { title: 'Design de Sistemas e Arquitetura', content: 'Foco em como os componentes de software se integram. O programador moderno projeta o "esqueleto" do sistema, e a IA ajuda a preencher os "músculos".' }
+            ];
+
+            const humanSkills = [
+                { title: 'Pensamento Crítico', content: 'Capacidade de analisar problemas de forma lógica, questionar premissas e avaliar as soluções propostas pela IA, em vez de aceitá-las cegamente.' },
+                { title: 'Criatividade e Resolução de Problemas', content: 'Habilidade de pensar "fora da caixa" para resolver problemas complexos e ambíguos, onde a IA, que opera com base em padrões, falha.' },
+                { title: 'Adaptabilidade e Aprendizagem Contínua', content: 'Abertura para aprender novas ferramentas, paradigmas e tecnologias constantemente. A única constante na era da IA é a mudança.' },
+                { title: 'Comunicação e Colaboração', content: 'Trabalhar eficazmente em equipe, comunicar ideias complexas de forma simples e entender as necessidades do negócio e dos usuários, guiando a aplicação da IA.' },
+                { title: 'Desenvolvimento Ético de IA', content: 'Consciência sobre vieses, justiça e o impacto social da tecnologia. Construir sistemas responsáveis é uma demanda crescente do mercado e da sociedade.' }
+            ];
+
+            function createAccordionItem(item, index) {
+                return `
+                    <div class="bg-white rounded-lg border border-slate-200">
+                        <h2>
+                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-slate-700 hover:bg-slate-50 transition" data-accordion-target="accordion-content-${index}">
+                                <span>${item.title}</span>
+                                <svg class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-content-${index}" class="accordion-content">
+                            <div class="p-5 border-t border-slate-200 text-slate-600">
+                                <p>${item.content}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            const techAccordionContainer = document.getElementById('tech-skills-accordion');
+            techSkills.forEach((item, index) => {
+                techAccordionContainer.innerHTML += createAccordionItem(item, `tech-${index}`);
+            });
+
+            const humanAccordionContainer = document.getElementById('human-skills-accordion');
+            humanSkills.forEach((item, index) => {
+                humanAccordionContainer.innerHTML += createAccordionItem(item, `human-${index}`);
+            });
+
+            document.querySelectorAll('[data-accordion-target]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-accordion-target');
+                    const targetContent = document.getElementById(targetId);
+                    const svg = button.querySelector('svg');
+                    
+                    if (targetContent.style.maxHeight) {
+                        targetContent.style.maxHeight = null;
+                        svg.classList.add('rotate-180');
+                    } else {
+                        targetContent.style.maxHeight = targetContent.scrollHeight + "px";
+                        svg.classList.remove('rotate-180');
+                    }
+                });
+            });
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
